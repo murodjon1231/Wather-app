@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-b from-blue-700 to-purple-800 text-white min-h-screen flex items-center justify-center">
+    <div class="w-80 bg-white bg-opacity-10 p-6 rounded-xl shadow-xl text-center">
+
+        <input
+            id="cityInput"
+            type="text"
+            placeholder="Search city"
+            class="w-full mb-4 py-2 px-3 rounded-full bg-white bg-opacity-20 placeholder-white text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+
+        <div class="text-center bg-gradient-to-b from-blue-500 to-purple-700 rounded-xl py-6">
+            <div class="mb-4">
+                <img id="weatherIcon" src="https://i.pinimg.com/originals/77/0b/80/770b805d5c99c7931366c2e84e88f251.png" alt="Weather Icon" class="mx-auto">
+            </div>
+            <div class="text-5xl font-semibold" id="temperature">--°</div>
+            <div class="text-lg mt-1" id="cityName">City</div>
+            <div class="text-sm text-gray-300 mt-2" id="tempRange">Max: --° Min: --°</div>
+            <div class="text-sm text-gray-300 mt-2" id="humidity">Humidity: --%</div>
+            <div class="text-sm text-gray-300 mt-2" id="wind">Wind: -- m/s</div>
+        </div>
+
+        <div class="flex justify-between items-center mt-4 text-sm">
+            <div>Today</div>
+            <div id="currentDate">--</div>
+        </div>
+        <button
+            id="searchButton"
+            class="w-full mt-6 py-2 bg-yellow-400 text-black font-bold rounded-full hover:bg-yellow-500 transition"
+        >
+            Search
+        </button>
+        <a href="./index.html"><button id="LogoutBtn" class="w-full mt-6 py-2 bg-yellow-400 text-black font-bold rounded-full hover:bg-red-600 transition">Logout</button></a>
+        <p id="errorMessage" class="mt-4 text-red-400 hidden"></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
